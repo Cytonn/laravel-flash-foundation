@@ -1,4 +1,9 @@
-# Easy Flash Messages
+# Easy Flash Messages for Foundation
+
+## Overview
+
+This is a package forked from the Laracasts Flash package to provide [Foundation CSS](http://foundation.zurb.com/) friendly flash messages. It is meant to be a drop-in replacement for Laracasts Flash.
+
 
 ## Installation
 
@@ -6,7 +11,7 @@ First, pull in the package through Composer.
 
 ```js
 "require": {
-    "laracasts/flash": "~1.3"
+    "thomaswardiii/laravel-flash-foundation": "~1.3"
 }
 ```
 
@@ -76,15 +81,14 @@ With this message flashed to the session, you may now display it in your view(s)
 
 ```html
 @if (Session::has('flash_notification.message'))
-    <div class="alert alert-{{ Session::get('flash_notification.level') }}">
-        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-
+    <div data-alert class="alert-box {{ Session::get('flash_notification.level') }}">
         {{ Session::get('flash_notification.message') }}
+        <a href="#" class="close">&times;</a>
     </div>
 @endif
 ```
 
-> Note that this package is optimized for use with Twitter Bootstrap.
+> Note that this package is optimized for use with ZURB Foundation.
 
 Because flash messages and overlays are so common, if you want, you may use (or modify) the views that are included with this package. Simply append to your layout view:
 
@@ -100,7 +104,7 @@ Because flash messages and overlays are so common, if you want, you may use (or 
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/foundation.css">
 </head>
 <body>
 
@@ -111,7 +115,11 @@ Because flash messages and overlays are so common, if you want, you may use (or 
 </div>
 
 <script src="//code.jquery.com/jquery.js"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="js/foundation.min.js"></script>
+
+<script>
+    $(document).foundation();
+</script>
 
 <!-- This is only necessary if you do Flash::overlay('...') -->
 <script>
