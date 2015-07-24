@@ -1,19 +1,7 @@
-<div id="flash-overlay-modal" class="modal fade {{ $modalClass or '' }}">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+<div id="flash-overlay-modal" class="reveal-modal {{ $modalClass or '' }}" data-reveal aria-labelledby="flash-overlay-modalTitle" aria-hidden="true" role="dialog">
+    <h2 id="flash-overlay-modalTitle">{{ $title }}</h2>
 
-                <h4 class="modal-title">{{ $title }}</h4>
-            </div>
+    <p>{{ $body }}</p>
 
-            <div class="modal-body">
-                <p>{{ $body }}</p>
-            </div>
-
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
+    <a class="close-reveal-modal" aria-label="Close">&#times;</a>
 </div>
