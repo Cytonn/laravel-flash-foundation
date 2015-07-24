@@ -1,11 +1,15 @@
 {
-    "name": "laracasts/flash",
-    "description": "Easy flash notifications",
+    "name": "thomaswardiii/laravel-flash-foundation",
+    "description": "Easy flash notifications in Laravel 5 for Foundation CSS 5",
     "license": "MIT",
     "authors": [
         {
             "name": "Jeffrey Way",
             "email": "jeffrey@laracasts.com"
+        },
+        {
+            "name": "Thomas Ward III",
+            "email": "thomaswardiii@gmail.com"
         }
     ],
     "require": {
