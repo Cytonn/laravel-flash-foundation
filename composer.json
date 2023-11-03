@@ -1,5 +1,5 @@
 {
-    "name": "thomaswardiii/laravel-flash-foundation",
+    "name": "cytonn/laravel-flash-foundation",
     "description": "Easy flash notifications in Laravel 5 for Foundation CSS 5",
     "license": "MIT",
     "authors": [
@@ -14,7 +14,7 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "illuminate/support": "~5.0"
+        "illuminate/support": "^5.0|^6.0|^7.0|^8.0|^9.0"
     },
     "require-dev": {
         "mockery/mockery": "dev-master"
